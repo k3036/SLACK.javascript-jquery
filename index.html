@@ -1,0 +1,191 @@
+//ボタンクリックで文字の出力
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>クリックイベント</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(function(){
+    // ここに処理を記述
+    $(button).on("click", function(){
+      alert("ボタンが押されました！");
+    });
+  });
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="button">
+      <p>button</p>
+    </div><!-- button -->
+  </div><!-- wrapper -->
+</body>
+</html>
+
+//マウスが載った時と、離れたときの色の変わる表示
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>クリックイベントと切り替え</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
+  
+  $(function(){
+    // ここに処理を記述
+    button1.addEventListener('mouseover', function() {
+      button1.style.backgroundColor = 'red';
+    });
+
+    button1.addEventListener('mouseleave', function() {
+      button1.style.backgroundColor = '#fdd';
+    });
+  });
+
+ 
+  $(function(){
+    // ここに処理を記述
+    button2.addEventListener('mouseover', function() {
+      button2.style.backgroundColor = 'red';
+    });
+
+    button2.addEventListener('mouseleave', function() {
+      button2.style.backgroundColor = '#fdd';
+    });
+  });
+
+  $(function(){
+    // ここに処理を記述
+    button3.addEventListener('mouseover', function() {
+      button3.style.backgroundColor = 'red';
+    });
+
+    button3.addEventListener('mouseleave', function() {
+      button3.style.backgroundColor = '#fdd';
+    });
+  });
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="button1" class="button">
+      <p>button1</p>
+    </div><!-- button1 -->
+    <div id="button2" class="button">
+      <p>button2</p>
+    </div><!-- button2 -->
+    <div id="button3" class="button">
+      <p>button3</p>
+    </div><!-- button3 -->
+  </div><!-- wrapper -->
+</body>
+</html>
+
+
+//勝手に斜めに動く記述
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>アニメーション</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
+ $(function(){
+   onclick
+  $("#button").animate({
+			marginTop:'200px', 
+			marginLeft:'400px' 
+});
+
+  });
+  </script>
+</head>
+<body>
+  <div id="button">
+    <p>button</p>
+  </div><!-- button -->
+</body>
+</html>
+
+//文章送信と画面出力のプログラム
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+   
+    </style>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <p class="sample1"></p>
+    
+        
+   
+    <ul></ul>
+
+    <input type="text" id="new-todo"><button id="add-button">add</button>
+
+    <script>
+    //文章送信、画面出力のプログラム
+    const addTodoButton = document.querySelector('#add-button');
+    addTodoButton.addEventListener('click', () => {
+        const input = document.querySelector('#new-todo');
+        const text = input.value;
+        input.value = '';
+
+        const newLi = document.createElement('li');
+        newLi.innerText = text;
+        const newButton = document.createElement('button');
+        document.querySelector('ul').appendChild(newLi);
+    });
+    </script>
+</body>
+
+</html>
+//if文による番号指定での色の変更
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>if文</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
+  $(function(){
+    // ここに処理を記述
+    $("#button").on("click", function () {
+    var v = $('input').val();
+    if(v=='1'){
+      $('#box').css('background-color','red');
+    }else if(v=='2'){
+      $('#box').css('background-color','green');
+    }else if(v=='3'){
+      $('#box').css('background-color','blue');
+    }else{
+      $('#box').css('background-color','block');
+    }
+});
+  });
+  </script>
+</head>
+<body>
+  <input type="text" id="value">
+  <input type="button" id="button" value="ボタン">
+  <div id="box">
+  </div><!-- button -->
+</body>
+</html>
+
+
+
+
+
